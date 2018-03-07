@@ -52,7 +52,7 @@ sub UpdateLineDirectives_perl #{{{3
     # I think because things are happening in an autocommand.  Is there a
     # better way?
 
-    my $fn = VIM::Eval('expand("%:p")');
+    my $fn = VIM::Eval('expand("%:p:.")');
 
     # Perl can deal with the nice ~/ home dir abbreviation in line directives.
     $fn =~ s/^$ENV{HOME}/~/;
