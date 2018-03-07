@@ -20,7 +20,7 @@ let loaded_update_perl_line_directives = 1
 " FIXME: you have to reload vim each time when testing this, I think because
 " the existing autocommand with the old routing still happens (the redefed
 " version of the perl command never gets linked in).
-autocmd BufWritePre *.vim,*.vimrc call s:UpdateLineDirectives()
+au! BufWritePre <buffer> call s:UpdateLineDirectives()
 
 " Implementation {{{1
 
